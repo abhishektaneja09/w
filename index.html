@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estately - Real Estate</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cream': '#f5f2ed',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream">
+    <!-- Header -->
+    <header class="flex items-center justify-between px-8 py-6">
+        <div class="text-2xl font-bold text-gray-900">Estately</div>
+        
+        <nav class="hidden md:flex items-center space-x-8">
+            <a href="#" class="text-gray-700 hover:text-gray-900">Condos</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Houses</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Commercial</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">For rent</a>
+            <span class="text-gray-400">•</span>
+            <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
+        </nav>
+        
+        <div class="flex items-center space-x-4">
+            <div class="relative">
+                <select class="bg-white border border-gray-300 rounded-full px-4 py-2 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-gray-200">
+                    <option>USD</option>
+                </select>
+            </div>
+            <button class="bg-gray-900 text-white px-6 py-2 rounded-full text-sm hover:bg-gray-800">
+                Log in
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <main class="px-8">
+        <!-- Title -->
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-12 leading-tight">
+            Real estate for living<br>and investments
+        </h1>
+
+        <!-- Property Card and Details -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Property Image -->
+            <div class="lg:col-span-2">
+                <div class="relative bg-gray-200 rounded-2xl overflow-hidden h-96">
+                    <!-- Placeholder for the modern house image -->
+                    <div class="w-full h-full bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center">
+                        <span class="text-gray-500">Modern House Image</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Details -->
+            <div class="space-y-6">
+                <!-- Address and Save -->
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-gray-600 text-sm">201 Prague Dr,</p>
+                        <p class="text-gray-600 text-sm">San Jose, CA 95119</p>
+                    </div>
+                    <button class="p-2 hover:bg-gray-100 rounded">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Property Stats -->
+                <div class="grid grid-cols-3 gap-4">
+                    <div>
+                        <p class="text-3xl font-bold">4</p>
+                        <p class="text-gray-600 text-sm">beds</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold">3</p>
+                        <p class="text-gray-600 text-sm">baths</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold">1,868</p>
+                        <p class="text-gray-600 text-sm">sqft</p>
+                    </div>
+                </div>
+
+                <!-- Price and Split Options -->
+                <div class="flex items-center justify-between">
+                    <p class="text-2xl font-bold">$1,650,000</p>
+                    <button class="text-sm text-gray-600 hover:text-gray-800 flex items-center">
+                        Split options
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Agent Info -->
+                <div class="flex items-center justify-between pt-4 border-t">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full"></div>
+                        <div>
+                            <p class="text-sm text-gray-500">Agent</p>
+                            <p class="font-medium">Amelia Stephenson</p>
+                        </div>
+                    </div>
+                    <button class="border border-gray-300 px-4 py-2 rounded-full text-sm hover:bg-gray-50">
+                        Contact
+                    </button>
+                </div>
+
+                <!-- Request Tour Button -->
+                <button class="w-full bg-gray-900 text-white py-3 rounded-full hover:bg-gray-800">
+                    Request a tour
+                    <p class="text-xs text-gray-300 mt-1">Earliest at 11:00 tomorrow</p>
+                </button>
+            </div>
+        </div>
+
+        <!-- Search Filters -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-4 items-center">
+                <!-- Location -->
+                <div class="flex items-center space-x-3">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <div>
+                        <p class="text-xs text-gray-500">Location</p>
+                        <p class="font-medium">San Jose, CA</p>
+                    </div>
+                </div>
+
+                <!-- Property Type -->
+                <div class="flex items-center space-x-3">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                    <div>
+                        <p class="text-xs text-gray-500">Property type</p>
+                        <p class="font-medium">Apartments</p>
+                    </div>
+                </div>
+
+                <!-- Price -->
+                <div class="flex items-center space-x-3">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                    </svg>
+                    <div>
+                        <p class="text-xs text-gray-500">Price</p>
+                        <p class="font-medium">$2,000—$13,000</p>
+                    </div>
+                </div>
+
+                <!-- Bedrooms -->
+                <div class="flex items-center space-x-3">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V6a2 2 0 012-2h2M4 8v8a2 2 0 002 2h2m-6-10h16M6 18h2m12-10v8a2 2 0 01-2 2h-2m2-10V6a2 2 0 00-2-2h-2m2 10H6"></path>
+                    </svg>
+                    <div>
+                        <p class="text-xs text-gray-500">Bedrooms</p>
+                        <p class="font-medium">3—5</p>
+                    </div>
+                </div>
+
+                <!-- More and Search -->
+                <div class="flex items-center space-x-4">
+                    <button class="flex items-center space-x-2 text-gray-600 hover:text-gray-800">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                        </svg>
+                        <span class="text-sm">More</span>
+                    </button>
+                    <button class="bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-800">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest in your area -->
+        <section class="mb-12">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-4xl font-bold text-gray-900">Latest in your area</h2>
+                <button class="text-gray-600 hover:text-gray-800 flex items-center">
+                    View all
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Property Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Property 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm">
+                    <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200"></div>
+                </div>
+                
+                <!-- Property 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm">
+                    <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200"></div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm">
+                    <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200"></div>
+                </div>
+                
+                <!-- Property 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm">
+                    <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-200"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
